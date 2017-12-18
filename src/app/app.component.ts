@@ -1,4 +1,7 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
+
+import { ToastyConfig } from 'ng2-toasty';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+    constructor(
+    private toastyConfig: ToastyConfig,
+    private router: Router
+  ) { }
+
 }

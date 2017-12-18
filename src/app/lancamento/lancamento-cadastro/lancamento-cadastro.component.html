@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="ui-g">
+
+
+      <div class="ui-g-12">
+        <h1> {{ editando ? 'Edição de ': 'Novo' }} Lançamento </h1>
+      </div>
+
+    <form #f=ngForm autocomplete="off" (ngSubmit)="salvar(f)">
+
+      <div class="ui-g-12 ui-md-5 ui-fluid">
+        <label>Opecação</label>
+        <p-dropdown [(ngModel)]="lancamento.operacao" name="operacao" [options]="operacoes"
+        placeholder="Selecione" [autoWidth]="false" required>
+        </p-dropdown>
+      </div>
+
+      <div class="ui-g-12">
+        <label>Valor</label>
+        <input [(ngModel)]="lancamento.valor" name="valor" pInputText type="text" placeholder="0,00"
+        currencyMask [options]="{ prefix: '', thousands: '.', decimal: ',', allowNegative: false }" >
+      </div>
+
+      <div class="ui-g-12">
+       <label>Data</label>
+       <p-calendar dateFormat="dd/mm/yy" [inline]="false" [readonlyInput]="false" [showIcon]="false"
+          required name="data" [(ngModel)]="lancamento.data" ></p-calendar>
+      </div>
+
+      <div class="ui-g-12 ui-md-5 ui-fluid">
+        <label>Conta</label>
+        <p-dropdown [(ngModel)]="lancamento.conta.codigo" name="conta" [options]="contas"
+          placeholder="Selecione" [autoWidth]="false"
+          required></p-dropdown>
+      </div>
+
+      <div class="ui-g-12">
+        <button pButton type="submit" label="Salvar"></button>
+        <button pButton type="button" label="Novo" (click)="novo(f)" ></button>
+        <a routerLink="/extratos">Ir para extratos</a>
+      </div>
+
+    </form>
+
+  </div>
+</div>

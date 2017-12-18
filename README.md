@@ -2,9 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.1.
 
+## Acess api to test and execute this project 
+https://github.com/wellingtonxafundifornio/gestaocontas-api
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm install`  and after run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
